@@ -1,0 +1,6 @@
+.vim/ruby
+.vim/.netrwhist
+*
+!.vim
+!.zshrc
+!.gitignore

@@ -46,8 +46,10 @@ plugins=(git heroku osx python redis-cli sublime sbt scala brew ant golang histo
 source $ZSH/oh-my-zsh.sh
 
 globalias() {
-    zle _expand_alias
-    zle expand-word
+    if [[ $LBUFFER != 'vim' ]]; then
+	zle _expand_alias
+	zle expand-word
+    fi
     zle self-insert
 }
 
