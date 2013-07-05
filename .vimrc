@@ -1,7 +1,25 @@
+let mapleader=","
+
+autocmd BufEnter * silent! lcd %:p:h
+
 set t_Co=256
 set nocompatible
 set showcmd
+set showmatch
 set foldmethod=marker
+set hidden
+set wildignore=*.pyc,*.class
+set title
+set history=1000
+set undolevels=1000
+set nobackup
+
+" Leader
+nnoremap <silent> <Leader>ev :e $MYVIMRC<CR>
+nnoremap <silent> <Leader>sv :so $MYVIMRC<CR>
+nnoremap <silent> <Leader>/ :nohlsearch<CR>
+nnoremap <Leader>] :tabnext<CR>
+nnoremap <Leader>[ :tabprevious<CR>
 
 " Syntax highlighting
 filetype on
